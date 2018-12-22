@@ -1,0 +1,43 @@
+<div class=" jumbotron text-center "   style="margin-bottom:0"  >
+    <h1 class="font-weight-bold" style="font-family:serif" >  Accent Club </h1>
+    <p style="font-size:large">  ملتقى ثقافي اجتماعي للافراد و المؤسسات الدولية و المحلية </p> 
+</div>
+  
+  <nav class= "navbar-collapse bg-dark navbar-dark"  style="text-align: right">
+    <a class= "navbar-brand"  routerLink='/AboutAs' routerLinkActive='active'> من نحن  </a>
+    <a class= "navbar-brand"  routerLink='/Reservation' routerLinkActive='active'> احجز معنا </a>
+    <a class= "navbar-brand"  routerLink='/FoodMenu' routerLinkActive='active'> قائمة الطعام </a>
+    <a class= "navbar-brand"  routerLink='/HomaPag' routerLinkActive='active' > الرئيسية </a>
+  </nav>
+
+
+  
+   
+    <div class="container">
+    
+     
+         <h5 style="text-align: right" > قائمة الطعام :</h5> 
+        <select (change)="onselect($event.target.value)" dir="rtl"  class="form-control"   >
+          <option   *ngFor="let menu of foodmenutype" value={{menu.id}}>{{menu.type}} </option>
+          </select>
+    
+</div>
+<br>
+<br>
+<div class="container">
+     
+    <table dir="rtl"  class="table  table-hover ">
+   <thead  class="thead-dark" style="text-align: right">
+        <th> النوع </th>
+        <th>  السعر </th>
+    </thead>
+   
+        <tr class="table-warning" style="text-align: right" *ngFor='let submenu of subfoodmenu'>
+          <td>{{submenu.dtype}}</td>
+          <td>شيكل {{submenu.price}} </td>
+         
+        </tr>
+   
+    </table>
+  </div>
+  
