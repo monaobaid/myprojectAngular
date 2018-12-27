@@ -4,20 +4,29 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule ,RoutingComponant} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FoodMenuComponent } from './food-menu/food-menu.component';
-import { FormsModule } from '@angular/forms';
+import { ResevationComponent } from './resevation/resevation.component';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule , Validator} from '@angular/forms';
+import { ReservationManageComponent } from './reservation-manage/reservation-manage.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponant,
-    FoodMenuComponent
+    FoodMenuComponent,
+    ResevationComponent,
+    ReservationManageComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

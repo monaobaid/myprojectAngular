@@ -1,0 +1,71 @@
+<div class=" jumbotron text-center "   style="margin-bottom:0"  >
+  <h1 class="font-weight-bold" style="font-family:serif" >  Accent Club </h1>
+  <p style="font-size:large">  ملتقى ثقافي اجتماعي للافراد و المؤسسات الدولية و المحلية </p> 
+</div>
+
+<nav class= "navbar-collapse bg-dark navbar-dark"  style="text-align: right">
+  <a class= "navbar-brand"  routerLink='/AboutAs' routerLinkActive='active'> من نحن  </a>
+  <a class= "navbar-brand"  routerLink='/Reservation' routerLinkActive='active'> احجز معنا </a>
+  <a class= "navbar-brand"  routerLink='/FoodMenu' routerLinkActive='active'> قائمة الطعام </a>
+  <a class= "navbar-brand"  routerLink='/HomaPag' routerLinkActive='active' > الرئيسية </a>
+</nav>
+<br>
+<br>
+
+<p *ngFor ='let x of datares'>{{x.name}}</p>
+
+<!-- viwe reservation by email -->
+<!-- 
+ <form dir="rtl"  style="text-align:right" [formGroup]='viweForm'  (ngSubmit)='view()'>
+  البريد الالكتروني : <input type="email" formControlName ='email' />
+  <button > حجوزاتي  </button>
+</form> -->
+
+<!-- -------------------------- -->
+
+<!-- Add new reservation--------- -->
+<form form dir="rtl"  style="text-align:right" [formGroup]='addForm'>
+    <div >
+    <label >:الاسم الثلاثي</label>
+    <input type="text"  formControlName='name' /><br/><br/>
+    </div>
+    <div >
+    <label >البريدالالكتروني: </label>
+    <input type="email"  formControlName='email' /><br/><br/>
+  </div>
+  <div >   
+  <label >:اليوم</label>
+  <input type="date"  formControlName='fristDate' /><br/><br/>
+  </div>
+  <div >
+  <label > عدد الايام:</label>
+  <input type="number" formControlName='numOfday' /><br/><br/>
+  </div>
+  <div>
+  <label >من الساعة :  </label>
+  <input type="time" formControlName='fristTime' /><br/><br/>
+  </div>
+  <div >
+  <label > عدد الساعات:</label>
+  <input type="number"  formControlName='numOfhour'/><br/><br/>
+  </div>
+  <div >
+    
+  <label > نوع الحجز:</label>
+  <select formControlName='typeOfreservation'><br/><br/>
+    <option>دورة تدريبة </option>
+    <option> لقاء ثقافي </option>
+    <option> حفلات  تخرج  </option>
+    <option> اخرى  </option>
+  </select>
+  <br>
+  <input type="checkbox" formControlName='hospitality' /> <label> يشمل الضيافة </label><br/><br/>
+  </div>
+  <div >
+    <label > عدد الاشخاص:</label>
+    <input type="number"  formControlName='numOfpeoples' /><br/><br/>
+    </div>
+  <button (click)="addServation()"> احجز الأن </button>
+</form>
+
+

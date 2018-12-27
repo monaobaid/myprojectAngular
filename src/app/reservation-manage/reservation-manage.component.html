@@ -1,0 +1,46 @@
+<h2>إدارة الحجوزات </h2>
+<input [(ngModel)]='email' type="text" />
+<button (click)='manage()'>عرض </button>
+
+<div class="container">
+     
+        <table dir="rtl"  class="table  table-hover ">
+       <thead  class="thead-dark" style="text-align: right">
+            <th> نوع الحجز </th>
+            <th>  من تاريخ </th>
+            <th> الوقت  </th>
+            <th>  عدد الايام  </th>
+            <th>  الفترة الزمنية(ساعة)</th>
+            <th> عدد الأشخاص </th>
+            <th>  يشمل الضيافة</th>
+            <th>  </th>
+            <th>  </th>
+        </thead>
+      
+            <!-- <tr  class="table-warning" style="text-align: right" *ngFor ='let data of datares'>
+             <td> {{data.typeOfreservation}}</td>
+             <td> {{data.fristDate}}</td>
+             <td> {{data.fristTime}}</td>
+             <td> {{data.numOfday}}</td>
+             <td> {{data.numOfhour}}</td>
+             <td> {{data.numOfpeoples}}</td>
+             <td > <input type="checkbox"  checked *ngIf='data.hospitality' />
+                <input type="checkbox"   *ngIf='!data.hospitality' />
+            </td>
+            </tr> -->
+       
+            <tr  class="table-warning" style="text-align: right" *ngFor ='let data of datares'>
+                    <td> <input type="text" value={{data.typeOfreservation}} /> </td>
+                    <td> <input  value={{data.fristDate}} /> </td>
+                    <td> <input  value={{data.fristTime}} /> </td>
+                    <td> <input value={{data.numOfday}}  /> </td>
+                    <td> <input  value={{data.numOfhour}} /> </td>
+                    <td> <input  value={{data.numOfpeoples}} /> </td>
+                    <td > <input type="checkbox"  checked *ngIf='data.hospitality' />
+                       <input type="checkbox"   *ngIf='!data.hospitality' />
+                   </td>
+                   <td><button type="button" (click)=updateReservation() > تعديل</button></td>
+                   <td><button type="button" (click)=deleteReservation() > حذف</button></td>
+                   </tr>
+        </table>
+      </div>

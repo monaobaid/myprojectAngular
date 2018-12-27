@@ -1,4 +1,10 @@
 import { Injectable } from '@angular/core';
+import { HttpClient ,HttpParams } from '@angular/common/http';
+import {Ireservation} from '../Iresevation'
+import { Observable, of } from 'rxjs';
+import { EmailValidator } from '@angular/forms';
+import { EventManagerPlugin } from '@angular/platform-browser/src/dom/events/event_manager';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +28,26 @@ foodMenu=[
     {id:3, dtype:' كيك الفلاولة  Strawberry cake' , price:10},
     {id:3, dtype:' كيك الشكولاتة  Chocolate cake', price:10},
   ]
-  constructor() { }
+  resData=[]
+  url="http://localhost:3000/jsdbReservation"
+  constructor(private http:HttpClient) { }
+
+  getReservation():Observable<Ireservation[]>{
+ return this.http.get<Ireservation[]>(this.url)
+  }
+
+  addNew(obj){
+  console.log(obj ,"obj")
+    return this.http.post<Ireservation >(this.url,obj)
+
+  }
+
+
+manageReservations(email :string): Observable<Ireservation[]>
+{
+  let httpParams=new HttpParams().set('email',email)
+  console.log(httpParams.toString())
+  return this.http.get<Ireservation[]>(this.url,{params:httpParams})
+
 }
- arType:'الحلويات'
+}
