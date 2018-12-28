@@ -7,8 +7,8 @@ import { ResevationComponent } from './resevation/resevation.component';
 import {HttpClientModule} from '@angular/common/http'
 
 
-const routes: Routes = [{path:'', redirectTo:'/HomePage',pathMatch:'full'},
-{path:'HomePage' , component:HomePageComponent},
+const routes: Routes = [{path:'', redirectTo:'/HomaPage',pathMatch:'full'},
+{path:'HomaPage' , component:HomePageComponent},
 {path:'ContactUs',component:ContactUsComponent},
 {path:'FoodMenu',component:FoodMenuComponent},
 {path:'Reservation' ,component:ResevationComponent}];

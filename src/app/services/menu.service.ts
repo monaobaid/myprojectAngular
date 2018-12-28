@@ -36,7 +36,7 @@ foodMenu=[
  return this.http.get<Ireservation[]>(this.url)
   }
 
-  addNew(obj){
+  addNew(obj:Ireservation):Observable<Ireservation>{
   console.log(obj ,"obj")
     return this.http.post<Ireservation >(this.url,obj)
 
@@ -49,5 +49,23 @@ manageReservations(email :string): Observable<Ireservation[]>
   console.log(httpParams.toString())
   return this.http.get<Ireservation[]>(this.url,{params:httpParams})
 
+}
+dateReservation(date :string)
+{
+  let httpParams=new HttpParams().set('fristDate',date)
+  console.log(httpParams.toString())
+  
+  return this.http.get<Ireservation>(this.url,{params:httpParams})
+
+}
+  delReservation (id:number): Observable<Ireservation> {
+    
+    return this.http.delete<Ireservation>(`${this.url}/${id}`)
+      
+
+}
+updateReservation(data:Ireservation):Observable<Ireservation>{
+return this.http.put<Ireservation>(this.url,data)
+   
 }
 }

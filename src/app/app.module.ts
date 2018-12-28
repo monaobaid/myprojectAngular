@@ -10,7 +10,8 @@ import {FormsModule, ReactiveFormsModule , Validator} from '@angular/forms';
 import { ReservationManageComponent } from './reservation-manage/reservation-manage.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-
+import {HomePageComponent } from './home-page/home-page.component'
+  
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ResevationComponent,
     ReservationManageComponent,
     NavBarComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    HomePageComponent
    
   ],
   imports: [

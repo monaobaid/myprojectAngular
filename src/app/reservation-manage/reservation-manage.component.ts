@@ -1,6 +1,7 @@
 import { Component, OnInit ,NgModule } from '@angular/core';
 import { MenuService } from '../services/menu.service';
-import { toDate } from '@angular/common/src/i18n/format_date';
+import {Ireservation } from '../Iresevation';
+
 
 @Component({
   selector: 'app-reservation-manage',
@@ -9,6 +10,8 @@ import { toDate } from '@angular/common/src/i18n/format_date';
 })
 export class ReservationManageComponent implements OnInit {
   datares=[]
+  delres=[]
+  updatedata :Ireservation
   email:string
   constructor(private reservation:MenuService) { }
 
@@ -21,4 +24,16 @@ manage()
   })
   
 }
+delete(data:Ireservation): void {
+  this.delres = this.delres.filter(h => h !== data);
+  this.reservation.delReservation(data.id).subscribe();
+  alert("تم الحذف")
 }
+update(data:Ireservation): void {
+  if (data) {
+    this.reservation.updateReservation(data).subscribe(d =>this.updatedata=d)
+  }
+}
+}
+
+

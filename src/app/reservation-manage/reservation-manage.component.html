@@ -16,18 +16,7 @@
             <th>  </th>
             <th>  </th>
         </thead>
-      
-            <!-- <tr  class="table-warning" style="text-align: right" *ngFor ='let data of datares'>
-             <td> {{data.typeOfreservation}}</td>
-             <td> {{data.fristDate}}</td>
-             <td> {{data.fristTime}}</td>
-             <td> {{data.numOfday}}</td>
-             <td> {{data.numOfhour}}</td>
-             <td> {{data.numOfpeoples}}</td>
-             <td > <input type="checkbox"  checked *ngIf='data.hospitality' />
-                <input type="checkbox"   *ngIf='!data.hospitality' />
-            </td>
-            </tr> -->
+    
        
             <tr  class="table-warning" style="text-align: right" *ngFor ='let data of datares'>
                     <td> <input type="text" value={{data.typeOfreservation}} /> </td>
@@ -39,8 +28,8 @@
                     <td > <input type="checkbox"  checked *ngIf='data.hospitality' />
                        <input type="checkbox"   *ngIf='!data.hospitality' />
                    </td>
-                   <td><button type="button" (click)=updateReservation() > تعديل</button></td>
-                   <td><button type="button" (click)=deleteReservation() > حذف</button></td>
+                   <td><button type="button" (click)=update(data) > تعديل</button></td>
+                   <td><button type="button" (click)=delete(data) > حذف</button></td>
                    </tr>
         </table>
       </div>
