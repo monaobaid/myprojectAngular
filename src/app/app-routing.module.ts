@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
-import { AboutAsComponent } from './about-as/about-as.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import {FoodMenuComponent} from './food-menu/food-menu.component';
 import { ResevationComponent } from './resevation/resevation.component';
 import {HttpClientModule} from '@angular/common/http'
@@ -9,7 +9,7 @@ import {HttpClientModule} from '@angular/common/http'
 
 const routes: Routes = [{path:'', redirectTo:'/HomePage',pathMatch:'full'},
 {path:'HomePage' , component:HomePageComponent},
-{path:'AboutAs',component:AboutAsComponent},
+{path:'ContactUs',component:ContactUsComponent},
 {path:'FoodMenu',component:FoodMenuComponent},
 {path:'Reservation' ,component:ResevationComponent}];
 
@@ -18,4 +18,4 @@ const routes: Routes = [{path:'', redirectTo:'/HomePage',pathMatch:'full'},
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponant = [HomePageComponent,AboutAsComponent,FoodMenuComponent,ResevationComponent]
+export const RoutingComponant = [HomePageComponent,ContactUsComponent,FoodMenuComponent,ResevationComponent]
