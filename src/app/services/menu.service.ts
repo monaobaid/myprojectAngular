@@ -13,6 +13,10 @@ export class MenuService {
 foodMenuType=[{id:1,type:'مشروبات ساخنه'},
 {id:2,type:'مشروبات باردة'},
 {id:3,type:'حلويات'}]
+typeOfreservation=[{type:"دورة تدريبية ", price:20},
+{type:"لقاء ثقافي/", price:15},
+{type:"حفل تخرج", price:20},
+{type:"أخرى", price:15}]
 foodMenu=[
     {id:1, dtype:'  قهوة  Coffee' , price:8 },
     {id:1, dtype:' شكولاتة ساخنة  Hot Chocolate', price:8 },

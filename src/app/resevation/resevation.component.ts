@@ -10,7 +10,7 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
   styleUrls: ['./resevation.component.css']
 })
 export class ResevationComponent implements OnInit {
-
+  typeOfreservation=this.reservation.typeOfreservation
   newRes : Ireservation
   addObj ={}
   datares =[]
@@ -19,6 +19,9 @@ export class ResevationComponent implements OnInit {
   isdate=false
   fristDate :string
   numOfday:number 
+  submit=false
+  total=0
+  Price=0
 
   
   constructor(private reservation:MenuService) { }
@@ -70,16 +73,26 @@ export class ResevationComponent implements OnInit {
           console.log(this.addObj)
         alert('تم الحفظ')
         this.addForm.reset()
-     // } 
+     this.total=0
       //else {
       // alert('  نأسف اليوم محجوز ' )
       // console.log(this.dates)
       // }
       //    //json}//
       }
-      
-
-         
+      reserv()
+      {
         
+        this.total=this.Price*this.addForm.controls.numOfpeoples.value* this.addForm.controls.numOfhour.value *this.addForm.controls.numOfday.value
+        console.log(this.total)
+      }
+
+
+
+      getPrice(price)
+      {
+        this.Price=price
+        console.log(this.Price)
+      }
   }
 
