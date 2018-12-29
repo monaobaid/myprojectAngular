@@ -9,6 +9,5 @@ export interface Ireservation{
     fristTime: Time,
     numOfhour: number,
     typeOfreservation: string,
-    hospitality:boolean,
     numOfpeoples: number
   }

@@ -11,7 +11,6 @@ import {Ireservation } from '../Iresevation';
 export class ReservationManageComponent implements OnInit {
   datares=[]
   delres=[]
-  updatedata :Ireservation
   email:string
   constructor(private reservation:MenuService) { }
 
@@ -24,16 +23,15 @@ manage()
   })
   
 }
-delete(data:Ireservation): void {
-  this.delres = this.delres.filter(h => h !== data);
-  this.reservation.delReservation(data.id).subscribe();
-  alert("تم الحذف")
+delete(data :Ireservation): void {
+ 
+  this.reservation.delReservation(data.id).subscribe(()=>alert("تم الحذف"));
+  
 }
-update(data:Ireservation): void {
-  if (data) {
-    this.reservation.updateReservation(data).subscribe(d =>this.updatedata=d)
-  }
-}
-}
+ 
+  update( data:Ireservation): void {
+  
+    this.reservation.updateReservation(data).subscribe(()=>alert("تم التعديل"))
 
-
+}
+}

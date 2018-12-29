@@ -25,7 +25,7 @@ foodMenu=[
     {id:2, dtype:' عصير مانخو  Mango juice' , price:7},
     {id:2, dtype:' مشروبات غازية Soft drink', price:5},
     {id:3, dtype:' تشيزكيك  Cheese cake' , price:15 },
-    {id:3, dtype:' كيك الفلاولة  Strawberry cake' , price:10},
+    {id:3, dtype:' كيك الفراولة  Strawberry cake' , price:10},
     {id:3, dtype:' كيك الشكولاتة  Chocolate cake', price:10},
   ]
   resData=[]
@@ -64,7 +64,7 @@ dateReservation(date :string)
       
 
 }
-updateReservation(data:Ireservation):Observable<Ireservation>{
+updateReservation(data:Ireservation):Observable<any>{
 return this.http.put<Ireservation>(this.url,data)
    
 }
