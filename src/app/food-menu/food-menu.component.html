@@ -1,43 +1,39 @@
-<!-- <div class=" jumbotron text-center "   style="margin-bottom:0"  >
-    <h1 class="font-weight-bold" style="font-family:serif" >  Accent Club </h1>
-    <p style="font-size:large">  ملتقى ثقافي اجتماعي للافراد و المؤسسات الدولية و المحلية </p> 
+
+<!------------------------ Images------------------------ -->
+<div class="container" style="margin-top: 35px" >
+  <div class="row">
+    <div class="col">
+      <img src="../../assets/coffee.jpg"  width="350" height="300"  alt="not found image" >
+    </div>
+    <div class="col">
+      <img src="../../assets/cake.jpg" width="350" height="300"  alt="not found image" >
+    </div>
+    <div class="col">
+      <img src="../../assets/cocktail.jpg" width="350" height="300"  alt="not found image" >
+    </div>
+  </div>
 </div>
-  
-  <nav class= "navbar-collapse bg-dark navbar-dark"  style="text-align: right">
-    <a class= "navbar-brand"  routerLink='/AboutAs' routerLinkActive='active'> من نحن  </a>
-    <a class= "navbar-brand"  routerLink='/Reservation' routerLinkActive='active'> احجز معنا </a>
-    <a class= "navbar-brand"  routerLink='/FoodMenu' routerLinkActive='active'> قائمة الطعام </a>
-    <a class= "navbar-brand"  routerLink='/HomaPage' routerLinkActive='active' > الرئيسية </a>
-  </nav> -->
+<!---------------------------------------------------  -->
 
-
-  
-   
-    <div class="container">
-    
-     
-         <h5 style="text-align: right" > قائمة الطعام :</h5> 
-        <select (change)="onselect($event.target.value)" dir="rtl"  class="form-control"   >
-          <option   *ngFor="let menu of foodmenutype" value={{menu.id}}>{{menu.type}} </option>
-          </select>
-    
+<!-- ---------------------- Food Menu----------------- -->
+<div class="container" style="margin-top: 35px" >
+  <h5 style="text-align: right" > قائمة الطعام </h5> 
+  <select (change)="onselect($event.target.value)" dir="rtl"  class="form-control"   >
+  <option style="font-size:larger"  *ngFor="let menu of foodmenutype" value={{menu.id}}> {{menu.type}} </option>
+  </select> 
 </div>
 <br>
 <br>
 <div class="container">
      
     <table dir="rtl"  class="table  table-hover ">
-   <thead  class="thead-dark" style="text-align: right">
-        <th> النوع </th>
-        <th>  السعر </th>
-    </thead>
-   
-        <tr class="table-warning" style="text-align: right" *ngFor='let submenu of subfoodmenu'>
-          <td>{{submenu.dtype}}</td>
-          <td>شيكل {{submenu.price}} </td>
+
+        <tr class="table-secondary" style="text-align: right" *ngFor='let submenu of subfoodmenu'>
+          <td style="font-size:larger" >{{submenu.dtype}}</td>
+          <td style="font-size:larger" > {{submenu.price | currency:"ILS" }} </td>
          
         </tr>
    
     </table>
-  </div>
-  
+</div>
+

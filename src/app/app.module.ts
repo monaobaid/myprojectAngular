@@ -8,7 +8,6 @@ import { ResevationComponent } from './resevation/resevation.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule , Validator} from '@angular/forms';
 import { ReservationManageComponent } from './reservation-manage/reservation-manage.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import {HomePageComponent } from './home-page/home-page.component'
   
@@ -20,7 +19,6 @@ import {HomePageComponent } from './home-page/home-page.component'
     FoodMenuComponent,
     ResevationComponent,
     ReservationManageComponent,
-    NavBarComponent,
     ContactUsComponent,
     HomePageComponent
    

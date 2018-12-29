@@ -5,19 +5,19 @@
   <div class="container">
       <div class="row">
           <div class="col-md-6 offset-md-3">
-              <h3  dir="rtl"  style="text-align:right"  ></h3>
+              
 <!-- Add new reservation--------- -->
-<form form dir="rtl"  style="text-align:right" [formGroup]='addForm' (ngSubmit)="onSubmit()">
+<form dir="rtl"  style="text-align:right" [formGroup]='addForm' (ngSubmit)="onSubmit()">
    
     <div class="form-group">
-    <label >: الاسم الثلاثي</label>
+    <label > الاسم الثلاثي</label>
     <input type="text"  formControlName='name' class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
     <div *ngIf="submitted && f.name.errors" class="alert alert-danger">
         <div *ngIf="f.name.errors.required">  يجب ادخال الاسم </div>
     </div>
 </div>
     <div class="form-group">
-    <label >البريدالالكتروني: </label>
+    <label >البريدالالكتروني</label>
     <input type="email"  formControlName='email' class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
     <div *ngIf="submitted && f.email.errors" class="alert alert-danger">
         <div *ngIf="f.email.errors.required " >  يجب ادخال البريدالالكتروني </div>
@@ -28,7 +28,7 @@
 <div class="form-row">
 
     <div class="col">
-  <label >:اليوم</label>
+  <label >اليوم</label>
   <input type="date"  formControlName='fristDate'  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fristDate.errors }" />
   <div *ngIf="submitted && f.fristDate.errors" class="alert alert-danger">
       <div *ngIf="f.fristDate.errors.required">  الرجاء تحديد يوم الحجز </div>
@@ -36,7 +36,7 @@
   </div>
 
   <div class="col">
-  <label > عدد الايام:</label>
+  <label > عدد الايام</label>
   <input type="number" formControlName='numOfday' class="form-control" [ngClass]="{ 'is-invalid': submitted && f.numOfday.errors }" />
   <div *ngIf="submitted && f.numOfday.errors" class="alert alert-danger">
       <div *ngIf="f.numOfday.errors.required">  الرجاء تحديد عدد الأيام </div>
@@ -47,14 +47,14 @@
   <div class="form-row">
 
     <div class="col">
-  <label >من الساعة :  </label>
+  <label >من الساعة   </label>
   <input type="time" formControlName='fristTime'class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.fristTime.errors }" />
   <div *ngIf="submitted && f.fristTime.errors" class="alert alert-danger">
       <div *ngIf="f.fristTime.errors.required">  الرجاء تحديد وقت الحجز </div>
   </div>
   </div>
   <div class="col">
-  <label > عدد الساعات:</label>
+  <label > عدد الساعات</label>
   <input type="number"  formControlName='numOfhour' class="form-control" [ngClass]="{ 'is-invalid': submitted && f.numOfhour.errors }" />
   <div *ngIf="submitted && f.numOfhour.errors" class="alert alert-danger">
       <div *ngIf="f.numOfhour.errors.required">   الرجاء تحديد عدد الأيام  </div>
@@ -62,7 +62,7 @@
   </div>
   </div>
   <div class="form-group">
-  <label > نوع الحجز:</label>
+  <label > نوع الحجز</label>
   <select formControlName='typeOfreservation' class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.typeOfreservation.errors }">
   <div *ngIf="submitted && f.typeOfreservation.errors" class="alert alert-danger">
       <div *ngIf="f.typeOfreservation.errors.required">   الرجاء اختيار نوع الحجز </div>
@@ -76,7 +76,7 @@
  
 </div>
   <div class="form-group">
-    <label > عدد الاشخاص:</label>
+    <label > عدد الاشخاص</label>
     <input type="number"  formControlName='numOfpeoples' class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.numOfpeoples.errors }" />
     <div *ngIf="submitted && f.numOfpeoples.errors" class="alert alert-danger">
         <div *ngIf="f.numOfpeoples.errors.required"> الرجاء تحديد عدد الاشخاص </div>
@@ -89,5 +89,7 @@
 
 </form>
 
-
-<!-- <app-reservation-manage></app-reservation-manage> -->
+</div>
+</div>
+</div>
+</div>
