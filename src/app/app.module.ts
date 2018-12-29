@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AppRoutingModule ,RoutingComponant} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FoodMenuComponent } from './food-menu/food-menu.component';
@@ -9,8 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule , Validator} from '@angular/forms';
 import { ReservationManageComponent } from './reservation-manage/reservation-manage.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import {HomePageComponent } from './home-page/home-page.component'
-  
+import {HomePageComponent } from './home-page/home-page.component'  
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import {HomePageComponent } from './home-page/home-page.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
+   NgbModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,

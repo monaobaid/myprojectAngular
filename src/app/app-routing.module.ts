@@ -5,17 +5,21 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import {FoodMenuComponent} from './food-menu/food-menu.component';
 import { ResevationComponent } from './resevation/resevation.component';
 import {HttpClientModule} from '@angular/common/http'
+import { mergeNsAndName } from '@angular/compiler';
+import {ReservationManageComponent}  from './reservation-manage/reservation-manage.component'
 
 
 const routes: Routes = [{path:'', redirectTo:'/HomaPage',pathMatch:'full'},
 {path:'HomaPage' , component:HomePageComponent},
 {path:'ContactUs',component:ContactUsComponent},
 {path:'FoodMenu',component:FoodMenuComponent},
-{path:'Reservation' ,component:ResevationComponent}];
+{path:'Reservation' ,component:ResevationComponent},
+{path:'ManageReservation' ,component:ReservationManageComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const RoutingComponant = [HomePageComponent,ContactUsComponent,FoodMenuComponent,ResevationComponent]
+export const RoutingComponant = [HomePageComponent,ContactUsComponent,FoodMenuComponent,ResevationComponent,ReservationManageComponent]
