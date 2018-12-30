@@ -32,12 +32,12 @@
                 
                    
                    <tr  class="table-light" style="text-align: right" *ngFor ='let data of datares'>
-                        <td> <input  value={{data.typeOfreservation}} /> </td>
-                        <td> <input  value={{data.fristDate}} /> </td>
-                        <td> <input  value={{data.fristTime}} /> </td>
-                        <td> <input value={{data.numOfday}}  /> </td>
-                        <td> <input  value={{data.numOfhour}} /> </td>
-                        <td> <input  value={{data.numOfpeoples}} /> </td>
+                        <td> <input   [(ngModel)]= "data.typeOfreservation" value={{data.typeOfreservation}} /> </td>
+                        <td> <input [(ngModel)]= "data.fristDate" value={{data.fristDate}} /> </td>
+                        <td> <input [(ngModel)]= "data.fristTimen"  value={{data.fristTime}} /> </td>
+                        <td> <input  [(ngModel)]= "data.numOfday" value={{data.numOfday}}  /> </td>
+                        <td> <input   [(ngModel)]= "data.numOfhour" value={{data.numOfhour}} /> </td>
+                        <td> <input  [(ngModel)]= "data.numOfpeoples" value={{data.numOfpeoples}} /> </td>
                         <td><button type="button" (click)=update(data) > تعديل</button></td>
                         <td><button type="button" (click)=delete(data) > حذف</button></td>
                         </tr>

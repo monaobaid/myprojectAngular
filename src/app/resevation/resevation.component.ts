@@ -73,6 +73,7 @@ export class ResevationComponent implements OnInit {
           console.log(this.addObj)
         alert('تم الحفظ')
         this.addForm.reset()
+        this.addForm
      this.total=0
       //else {
       // alert('  نأسف اليوم محجوز ' )

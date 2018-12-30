@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient ,HttpParams } from '@angular/common/http';
+import { HttpClient ,HttpParams, HttpHeaders } from '@angular/common/http';
 import {Ireservation} from '../Iresevation'
 import { Observable, of } from 'rxjs';
 import { EmailValidator } from '@angular/forms';
@@ -68,8 +68,9 @@ dateReservation(date :string)
       
 
 }
-updateReservation(data:Ireservation):Observable<any>{
-return this.http.put<Ireservation>(this.url,data)
-   
+updateReservation(data:Ireservation):Observable<Ireservation>{
+
+return this.http.put<Ireservation>(`${this.url}/${data.id}`, data)
+
 }
 }

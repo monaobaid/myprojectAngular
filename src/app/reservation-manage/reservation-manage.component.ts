@@ -3,6 +3,7 @@ import { MenuService } from '../services/menu.service';
 import {Ireservation } from '../Iresevation';
 
 
+
 @Component({
   selector: 'app-reservation-manage',
   templateUrl: './reservation-manage.component.html',
@@ -11,6 +12,7 @@ import {Ireservation } from '../Iresevation';
 export class ReservationManageComponent implements OnInit {
   datares=[]
   delres=[]
+  data :Ireservation
   email:string
   constructor(private reservation:MenuService) { }
 
@@ -23,15 +25,18 @@ manage()
   })
   
 }
-delete(data :Ireservation): void {
+delete(data) {
  
-  this.reservation.delReservation(data.id).subscribe(()=>alert("تم الحذف"));
-  
+  this.reservation.delReservation(data.id).subscribe(()=>{
+    alert("تم الحذف")
+    this.manage()});
+ 
 }
  
-  update( data:Ireservation): void {
-  
-    this.reservation.updateReservation(data).subscribe(()=>alert("تم التعديل"))
+  update(data) {
+    
+    this.reservation.updateReservation(data).subscribe(()=>alert("تم تعديل")  )
+
 
 }
 }
